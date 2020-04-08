@@ -120,7 +120,7 @@ func FromTime(t time.Time) Date {
 // New creates a new Date
 func New(year int, month time.Month, day int) Date {
 	// Remove all second and nano second information and mark as UTC
-	return Date{Time: time.Date(year, month, day, 0, 0, 0, 0, time.UTC)}
+	return Date{Time: time.Date(year, month, day, 0, 0, 0, 0, time.Local)}
 }
 
 // Parse converts a ISO 8601 date string to a Date, possibly returning an error
